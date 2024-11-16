@@ -1,79 +1,60 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+## MilkyWay 프로젝트 React Native 변환 🚀
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+기존 웹으로 제작된 MilkyWay 프로젝트를 React Native로 변환하는 작업을 진행 중입니다.  React Native CLI를 사용하여 프로젝트를 생성하였으며, 사용 중인 React Native 버전은 `0.76.1`입니다.
 
-## Step 1: Start the Metro Server
+---
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## **설치 및 실행 가이드**
 
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+### **1. 글로벌 의존성 설치**
+프로젝트 루트 디렉터리에서 아래 명령어를 실행하여 의존성을 설치:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm install
 ```
 
-### For iOS
+---
+
+### **2. iOS 의존성 설치**
+ios 네이티브 의존성 설치를 위하여 `ios/` 디렉터리로 이동하여 CocoaPods를 실행:
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+cd ios
+pod install
+cd ..
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+---
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### **3. Metro 번들러 시작**
+React Native의 Metro 번들러를 실행하여 앱 번들링 시작:
 
-## Step 3: Modifying your App
+```bash
+npm run start
+```
 
-Now that you have successfully run the app, let's modify it.
+또는:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```bash
+npx react-native start
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+---
 
-## Congratulations! :tada:
+### **4. 앱 실행**
+CLI를 사용하여 iOS 또는 Android 앱을 바로 실행할 수 있습니다. 아래 명령어를 참고:
 
-You've successfully run and modified your React Native App. :partying_face:
+#### iOS 실행
+```bash
+npx react-native run-ios
+```
 
-### Now what?
+#### Android 실행
+```bash
+npx react-native run-android
+```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+#### CLI 빌드 실패 시 (iOS)
+CLI에서 iOS 빌드가 실패하는 경우, Xcode를 사용하여 빌드 및 실행합:
 
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
