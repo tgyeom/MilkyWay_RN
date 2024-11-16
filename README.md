@@ -56,5 +56,5 @@ npx react-native run-android
 ```
 
 #### CLI 빌드 실패 시 (iOS)
-CLI에서 iOS 빌드가 실패하는 경우, Xcode를 사용하여 빌드 및 실행합:
+CLI에서 iOS 빌드가 실패하는 경우, Xcode를 사용하여 빌드 및 실행
 
