@@ -8,7 +8,7 @@ import {Dimensions, PixelRatio} from 'react-native';
  * @type number
  */
 
-const responsiveSize = () => {
+const useResponsiveSize = () => {
   const {width, height} = Dimensions.get('window');
 
   // 가로 360 x 세로 800
@@ -36,4 +36,4 @@ const responsiveSize = () => {
   return {responsiveFont, responsiveWidth, responsiveHeight};
 };
 
-export default responsiveSize;
+export default useResponsiveSize;

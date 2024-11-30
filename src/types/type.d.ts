@@ -12,6 +12,7 @@ declare global {
     const content: React.FC<SvgProps>;
     export default content;
   }
+  type ScreenType = '' | 'Home' | 'Splash';
 }
 
 export {};
