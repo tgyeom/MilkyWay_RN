@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import useResponsiveSize from '@/utils/responsive';
 import ArrowIcon from '@/assets/svg/Arrow.svg';
 import StarUnCheckedIcon from '@/assets/svg/StarUnChecked.svg';
-import {customerColor} from '@/utils/tag';
+import {customerColor} from '@/utils/Tag';
 import {Text} from './Text';
 import cardData from '@/data/homeCardData.json';
 import color from '@/consts/color';
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   cardInfo: {
     fontSize: responsiveFont(12),
     fontWeight: 'regular',
-    color: color.grayColor,
+    color: color.TEXT_04,
   },
   recruitmentContainer: {
     flexDirection: 'row',
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   recruitmentCount: {
-    color: color.orangeColor,
+    color: color.PRIMARY_R,
     fontSize: responsiveFont(12),
   },
   starCount: {

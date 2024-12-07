@@ -69,7 +69,7 @@ const Home = () => {
         <View style={styles.contentHeader}>
           <Text style={styles.contentTitle} weight="bold">
             우리 학교
-            <Text style={{color: color.blueColor}}> 인기 스터디/프로젝트</Text>
+            <Text style={{color: color.PRIMARY_B}}> 인기 스터디/프로젝트</Text>
           </Text>
           <Text style={styles.contentLink} weight="regular">
             전체 보기
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: responsiveWidth(10),
   },
   percentText: {
-    color: color.blueColor,
+    color: color.PRIMARY_B,
     fontSize: responsiveFont(12),
     fontWeight: '400',
   },
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     fontSize: responsiveFont(14),
     marginVertical: responsiveHeight(10),
     fontWeight: '300',
-    color: color.grayColor,
+    color: color.TEXT_04,
   },
   borderSection: {
     borderTopColor: '#F0F0F0',
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   },
   contentLink: {
     fontSize: responsiveFont(12),
-    color: color.lightGrayColor,
+    color: color.TEXT_04,
   },
   scrollCardContainer: {
     width: '100%',
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     marginHorizontal: responsiveWidth(4),
   },
   activeDot: {
-    backgroundColor: color.blueColor,
+    backgroundColor: color.PRIMARY_B,
   },
   inactiveDot: {
     backgroundColor: '#F0F0F0',

@@ -1,9 +1,16 @@
 const color = {
-  grayColor: '#A0A0A0',
-  lightGrayColor: '#D9D9D9',
-  grayBg: '#F8F8F8',
-  blueColor: '#133488',
-  orangeColor: '#FF9078',
+  PRIMARY_R: '#FF9078',
+  SECONDARY_R: '#FFD1C4',
+  PRIMARY_B: '#133488',
+  PRIMARY_B_PRESS: '#09205C',
+  TERITARY_01: '#F8F8F8',
+  LINE: '#EAEAEA',
+  SUCCESS: '#56F09C',
+  ERROR: '#FF6556',
+  TEXT_01: '#1A1A1A',
+  TEXT_02: '#3C3C3C',
+  TEXT_03: '#626262',
+  TEXT_04: '#A0A0A0',
 };
 
 export default color;
