@@ -7,6 +7,7 @@ const color = {
   LINE: '#EAEAEA',
   SUCCESS: '#56F09C',
   ERROR: '#FF6556',
+  WHITE: '#FFFFFF',
   TEXT_01: '#1A1A1A',
   TEXT_02: '#3C3C3C',
   TEXT_03: '#626262',

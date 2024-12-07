@@ -51,7 +51,7 @@ export default Input;
 const styles = StyleSheet.create({
   inputContainer: {
     borderRadius: 32,
-    backgroundColor: color.grayBg,
+    backgroundColor: color.TERITARY_01,
     display: 'flex',
   },
   textInput: {

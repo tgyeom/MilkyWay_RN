@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: color.grayBg,
+    backgroundColor: color.TERITARY_01,
     paddingHorizontal: responsiveWidth(24),
     paddingVertical: responsiveHeight(25),
   },

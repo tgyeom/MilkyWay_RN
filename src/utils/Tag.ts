@@ -10,11 +10,11 @@ const customerColor = ({type}: TagProps) => {
       break;
     case '스터디':
       bgColor = '#FFEBE7';
-      textColor = color.orangeColor;
+      textColor = color.PRIMARY_R;
       break;
     case '멘토':
       bgColor = '#E3EBFF';
-      textColor = color.blueColor;
+      textColor = color.PRIMARY_B;
       break;
     default:
       bgColor = 'gray';
