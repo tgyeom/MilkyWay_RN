@@ -1,15 +1,17 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Input from './Input';
 import useResponsiveSize from '@/utils/responsive';
 import HeaderLogoIcon from '@/assets/svg/HeaderLogo.svg';
 import BookmarkIcon from '@/assets/svg/Bookmark.svg';
+import {useNavigation} from '@react-navigation/native';
 
 const {responsiveWidth, responsiveHeight} = useResponsiveSize();
 
 const Header = () => {
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation();
 
   return (
     <View style={[styles.container, {marginTop: insets.top}]}>
@@ -28,11 +30,16 @@ const Header = () => {
         />
       </View>
       <View style={styles.logoContainer}>
-        <BookmarkIcon
-          style={styles.character}
-          width={responsiveWidth(24)}
-          height={responsiveWidth(24)}
-        />
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Login');
+          }}>
+          <BookmarkIcon
+            style={styles.character}
+            width={responsiveWidth(24)}
+            height={responsiveWidth(24)}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
