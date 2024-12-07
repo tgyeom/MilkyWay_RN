@@ -1,15 +1,22 @@
+import color from '@/consts/color';
 import useResponsiveSize from '@/utils/responsive';
 import responsiveSize from '@/utils/responsive';
 import React from 'react';
-import {TextInput, StyleSheet, TextInputProps, View} from 'react-native';
+import {
+  TextInput,
+  StyleSheet,
+  TextInputProps,
+  View,
+  DimensionValue,
+} from 'react-native';
 
 const {responsiveWidth, responsiveHeight} = useResponsiveSize();
 
 interface InputProps extends TextInputProps {
   placeholder: string;
   value?: string;
-  width?: number | string;
-  height?: number | string;
+  width?: DimensionValue;
+  height?: DimensionValue;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -44,7 +51,7 @@ export default Input;
 const styles = StyleSheet.create({
   inputContainer: {
     borderRadius: 32,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: color.grayBg,
     display: 'flex',
   },
   textInput: {
