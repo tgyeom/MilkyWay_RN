@@ -1,20 +1,26 @@
-interface ITagProps {
-  type?: '모집중' | '스터디' | '멘토';
-}
+import color from '@/consts/color';
 
-const customerColor = ({type}: ITagProps) => {
+const customerColor = ({type}: TagProps) => {
+  let bgColor: string;
+  let textColor: string;
   switch (type) {
     case '모집중':
-      return '#133488';
+      bgColor = '#133488';
+      textColor = '#ffffff';
+      break;
     case '스터디':
-      return '#FFEBE7';
+      bgColor = '#FFEBE7';
+      textColor = color.orangeColor;
+      break;
     case '멘토':
-      return '#E3EBFF';
+      bgColor = '#E3EBFF';
+      textColor = color.blueColor;
+      break;
     default:
-      return 'gray';
+      bgColor = 'gray';
+      textColor = 'white';
   }
+  return {bgColor, textColor};
 };
 
-export default {
-  customerColor,
-};
+export {customerColor};

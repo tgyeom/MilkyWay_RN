@@ -5,4 +5,13 @@ const ScreenTypeAtom = atom<ScreenType>({
   default: 'Splash',
 });
 
-export {ScreenTypeAtom};
+const userAtom = atom<IUser>({
+  key: 'userAtom',
+  default: {
+    name: '',
+    role: '',
+    resume: null,
+  },
+});
+
+export {ScreenTypeAtom, userAtom};

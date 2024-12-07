@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "type": "토익",
+    "title": "스터디원 모집합니다!",
+    "name": "김태겸",
+    "department": "컴퓨터정보학부",
+    "recruitment": "2/4",
+    "starCount": 12
+  },
+  {
+    "id": 2,
+    "type": "토익",
+    "title": "스터디원 모집합니다!",
+    "name": "김태겸",
+    "department": "컴퓨터정보학부",
+    "recruitment": "2/4",
+    "starCount": 12
+  },
+  {
+    "id": 3,
+    "type": "토익",
+    "title": "스터디원 모집합니다!",
+    "name": "김태겸",
+    "department": "컴퓨터정보학부",
+    "recruitment": "2/4",
+    "starCount": 12
+  }
+]

@@ -1,7 +1,12 @@
+import {Text} from '@/components/Text';
 import {StyleSheet, View} from 'react-native';
 
 const Login = () => {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      <Text>login</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

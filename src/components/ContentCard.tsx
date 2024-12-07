@@ -3,22 +3,29 @@ import useResponsiveSize from '@/utils/responsive';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Text} from './Text';
-import HomeSearch from '@/assets/svg/HomeSearch.svg';
+import HomeSearchIcon from '@/assets/svg/HomeSearch.svg';
 
 const {responsiveWidth, responsiveHeight, responsiveFont} = useResponsiveSize();
 
-const CardView = () => (
+const ContentCard = ({
+  headerText,
+  contentText,
+}: {
+  headerText: string;
+  contentText: string;
+}) => (
   <View style={styles.CardContainer}>
     <View>
-      <HomeSearch />
+      <HomeSearchIcon />
     </View>
     <View>
-      <Text style={styles.CardContent}>나에게 맞는</Text>
+      <Text style={styles.CardContent} weight="regular">
+        {headerText}
+      </Text>
     </View>
     <View>
-      <Text style={styles.CardTitle}>
-        스터디/프로젝트 {'\n'}
-        찾아보기
+      <Text style={styles.CardTitle} weight="bold">
+        {contentText}
       </Text>
     </View>
   </View>
@@ -28,8 +35,8 @@ const styles = StyleSheet.create({
   CardContainer: {
     borderRadius: responsiveHeight(20),
     justifyContent: 'space-around',
-    width: responsiveWidth(158),
-    height: responsiveHeight(154),
+    width: '100%',
+    height: '100%',
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
@@ -40,9 +47,10 @@ const styles = StyleSheet.create({
   CardTitle: {fontSize: responsiveFont(16), fontWeight: 600},
   CardContent: {
     fontSize: responsiveFont(12),
-    fontWeight: 400,
-    marginTop: responsiveHeight(10),
+    fontWeight: 300,
+    color: '#222222',
+    marginTop: responsiveHeight(5),
   },
 });
 
-export default CardView;
+export default ContentCard;

@@ -3,8 +3,8 @@ import {StyleSheet, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Input from './Input';
 import useResponsiveSize from '@/utils/responsive';
-import HeaderLogo from '@/assets/svg/HeaderLogo.svg';
-import Bookmark from '@/assets/svg/Bookmark.svg';
+import HeaderLogoIcon from '@/assets/svg/HeaderLogo.svg';
+import BookmarkIcon from '@/assets/svg/Bookmark.svg';
 
 const {responsiveWidth, responsiveHeight} = useResponsiveSize();
 
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <View style={[styles.container, {marginTop: insets.top}]}>
       <View style={styles.logoContainer}>
-        <HeaderLogo
+        <HeaderLogoIcon
           style={styles.character}
           width={responsiveWidth(22)}
           height={responsiveWidth(22)}
@@ -28,7 +28,7 @@ const Header = () => {
         />
       </View>
       <View style={styles.logoContainer}>
-        <Bookmark
+        <BookmarkIcon
           style={styles.character}
           width={responsiveWidth(24)}
           height={responsiveWidth(24)}

@@ -13,6 +13,14 @@ declare global {
     export default content;
   }
   type ScreenType = '' | 'Home' | 'Splash';
-}
 
-export {};
+  interface IUser {
+    name: string | null;
+    role: string | null;
+    resume: number | null;
+  }
+
+  type TagProps = {
+    type: '' | '모집중' | '스터디' | '멘토';
+  };
+}

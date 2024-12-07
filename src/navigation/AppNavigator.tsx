@@ -32,7 +32,7 @@ const AppNavigator: React.FC = () => {
         name="Login"
         component={Login}
         options={{
-          header: () => <Header />,
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
