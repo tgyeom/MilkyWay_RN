@@ -1,7 +1,9 @@
 import color from '@/consts/color';
 import useResponsiveSize from '@/utils/responsive';
-import React from 'react';
+import LoginLogo from '@/assets/svg/LoginLogo.svg';
+import CloseIcon from '@/assets/svg/Close.svg';
 import {
+  Dimensions,
   Pressable,
   StyleSheet,
   Text,
@@ -9,35 +11,49 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const {responsiveHeight, responsiveWidth, responsiveFont} = useResponsiveSize();
+const {height, width} = Dimensions.get('window');
 
 const Login = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder={'이메일 주소'}
-        // onChangeText={onChangeText}
-        // value={value}
-        // secureTextEntry={secureTextEntry} // 비밀번호 입력 시
-      />
-      <TextInput
-        style={styles.input}
-        placeholder={'비밀번호'}
-        // onChangeText={onChangeText}
-        // value={value}
-        // secureTextEntry={secureTextEntry} // 비밀번호 입력 시
-      />
-      <TouchableHighlight
-        style={styles.loginButton}
-        underlayColor={color.PRIMARY_B_PRESS}
-        onPress={() => console.log('로그인 버튼 클릭!')}>
-        <Text style={styles.loginButtonLabel}>로그인</Text>
-      </TouchableHighlight>
-      <Pressable onPress={() => console.log('회원가입 버튼 클릭!')}>
-        <Text style={styles.signUpButton}>밀키웨이가 처음이신가요?</Text>
-      </Pressable>
+      <View style={styles.TopSection}>
+        <View style={styles.headerContainer}>
+          <Pressable onPress={() => navigation.goBack()}>
+            <CloseIcon />
+          </Pressable>
+        </View>
+      </View>
+      <View style={styles.inputSection}>
+        <LoginLogo style={styles.loginLogo} />
+        <TextInput
+          style={styles.input}
+          placeholder={'이메일 주소'}
+          // onChangeText={onChangeText}
+          // value={value}
+          // secureTextEntry={secureTextEntry} // 비밀번호 입력 시
+        />
+        <TextInput
+          style={styles.input}
+          placeholder={'비밀번호'}
+          // onChangeText={onChangeText}
+          // value={value}
+          // secureTextEntry={secureTextEntry} // 비밀번호 입력 시
+        />
+        <TouchableHighlight
+          style={styles.loginButton}
+          underlayColor={color.PRIMARY_B_PRESS}
+          onPress={() => console.log('로그인 버튼 클릭!')}>
+          <Text style={styles.loginButtonLabel}>로그인</Text>
+        </TouchableHighlight>
+        <Pressable onPress={() => console.log('회원가입 버튼 클릭!')}>
+          <Text style={styles.signUpButton}>밀키웨이가 처음이신가요?</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
@@ -45,9 +61,31 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
+    width: width,
+    height: height,
+    paddingHorizontal: responsiveWidth(20),
+    paddingVertical: responsiveHeight(7),
+  },
+  TopSection: {
+    flex: 1,
+    flexDirection: 'column',
+    width: '100%',
+    height: '100%',
+  },
+  headerContainer: {
+    flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: responsiveWidth(16),
+    alignItems: 'flex-start',
+  },
+  inputSection: {
+    flex: 14,
+    justifyContent: 'center',
     alignItems: 'center',
+  },
+  loginLogo: {
+    width: responsiveWidth(210),
+    marginBottom: responsiveHeight(40),
   },
   input: {
     backgroundColor: color.TERITARY_01,
