@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from '@/screens/Home.screen';
 import Login from '@/screens/Login.screen';
 import Splash from '@/screens/Splash.screen';
+import SignUp from '@/screens/SignUp.screen';
 import Header from '@/components/Header';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -31,6 +32,13 @@ const AppNavigator: React.FC = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
         options={{
           headerShown: false,
         }}

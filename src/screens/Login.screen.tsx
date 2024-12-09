@@ -6,12 +6,12 @@ import {
   Dimensions,
   Pressable,
   StyleSheet,
-  Text,
   TextInput,
   TouchableHighlight,
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {Text} from '@/components/Text';
 
 const {responsiveHeight, responsiveWidth, responsiveFont} = useResponsiveSize();
 const {height, width} = Dimensions.get('window');
@@ -48,9 +48,11 @@ const Login = () => {
           style={styles.loginButton}
           underlayColor={color.PRIMARY_B_PRESS}
           onPress={() => console.log('로그인 버튼 클릭!')}>
-          <Text style={styles.loginButtonLabel}>로그인</Text>
+          <Text style={styles.loginButtonLabel} weight="regular">
+            로그인
+          </Text>
         </TouchableHighlight>
-        <Pressable onPress={() => console.log('회원가입 버튼 클릭!')}>
+        <Pressable onPress={() => navigation.navigate('SignUp')}>
           <Text style={styles.signUpButton}>밀키웨이가 처음이신가요?</Text>
         </Pressable>
       </View>
